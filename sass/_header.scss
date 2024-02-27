@@ -1,5 +1,5 @@
 body {
-    background-color: var(--secondaryColor);
+    background-color: $secondaryColor;
 }
 
 .header {
@@ -14,14 +14,14 @@ body {
 
 .show__header__shrink {
     padding: 15px 0;
-    box-shadow: 0px 0px 10px var(--hoverColor);
-    background: var(--secondaryColor);
+    box-shadow: 0px 0px 10px $hoverColor;
+    background: $secondaryColor;
 }
 
 .header__nav__logo {
     font-size: 30px;
     font-weight: 700;
-    color: var(--primaryColor);
+    color: $primaryColor;
 }
 
 
@@ -39,7 +39,7 @@ body {
     border-top: 1px solid transparent;
     position: relative;
     transition: 0.3s;
-    color: var(--primaryColor);
+    color: $primaryColor;
 }
 
 .header__nav__right__list__item::after {
@@ -47,7 +47,7 @@ body {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: var(--primaryColor);
+    background-color: $primaryColor;
     bottom: 0;
     left: 50%;
     border-radius: 0 1px 1px 0;
@@ -60,7 +60,7 @@ body {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: var(--primaryColor);
+    background-color: $primaryColor;
     bottom: 0;
     right: 50%;
     border-radius: 1px 0 0 1px;
@@ -68,13 +68,13 @@ body {
 }
 
 .header__nav__right__list__item:hover {
-    color:var(--hoverColor);
+    color:$hoverColor;
 }
 
 .header__nav__right__list__item:hover::after,
 .header__nav__right__list__item:hover::before {
     width: 50%;
-    background: var(--hoverColor);
+    background: $hoverColor;
 }
 
 .header__nav__right__list__close {
@@ -89,19 +89,19 @@ body {
 
 .header__nav__right__btns__contact {
     padding: 6px 13px;
-    border: 2px solid var(--primaryColor);
+    border: 2px solid $primaryColor;
     background-color: transparent;
     border-radius: 2px;
     font-size: 16px;
     font-weight: 600;
     transition: 0.3s;
-    color: var(--primaryColor);
+    color: $primaryColor;
 }
 
 .header__nav__right__btns__contact:hover {
-    border-color:var(--hoverColor);
-    background:var(--hoverColor);
-    color:var(--secondaryColor);
+    border-color:$hoverColor;
+    background:$hoverColor;
+    color:$secondaryColor;
 }
 
 .header__nav__right__btns__hamburger {
@@ -117,20 +117,20 @@ body {
 .header__nav__right__btns__hamburger span {
     width: 20px;
     height: 2.5px;
-    background: var(--primaryColor);
+    background: $primaryColor;
     border-radius: 2px;
     transition: .4s;
 }
 
 .header__nav__right__btns__hamburger:hover 
 .header__nav__right__btns__hamburger__line {
-    background: var(--hoverColor);
+    background: $hoverColor;
 }
 
 .header__nav__right__btns__dark-mode {
     border: none;
     background: transparent;
-    color: var(--darkModeColor);
+    color: $darkModeColor;
     font-size: 18px;
 }
 
@@ -146,18 +146,18 @@ body {
     display: block;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 700px ){
     .header__nav__right__list {
         position: fixed;
         top: 0;
         left: -100%;
         width: 50%;
         height: 100vh;
-        background-color: var(--secondaryColor);
+        background-color: $secondaryColor;
         flex-direction: column;
         justify-content: center;
         gap: 20px;
-        box-shadow: 0px 0px 15px var(--hoverColor);
+        box-shadow: 0px 0px 15px $hoverColor;
         transition: 0.3s;
         z-index: 9999;
     }
@@ -178,4 +178,3 @@ body {
         display: block;
     }
 }
-
