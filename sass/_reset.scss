@@ -1,58 +1,133 @@
 .dark {
-    $primaryColor: white;
-    $secondaryColor: black;
-    $darkModeColor: yellow;
+  $primaryColor: white;
+  $secondaryColor: black;
+  $darkModeColor: yellow;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
 }
 
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
-    color: inherit;
+  color: inherit;
 }
 
 button {
-    cursor: pointer;
-    border: none;
+  cursor: pointer;
+  border: none;
 }
 
 .container {
-    width: 85%;
-    margin: 0 auto;
-    max-width: 1440px;
+  width: 85%;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 .df {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .back-top {
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    font-size: 25px;
-    bottom: 20px;
-    right: 20px;
-    background: $backgroundColor;
-    border-radius: 50%;
-    color: $secondaryColor;
-    display: none;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  bottom: 20px;
+  right: 20px;
+  background: $backgroundColor;
+  border-radius: 50%;
+  color: $secondaryColor;
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
 
+
 .show__back-top {
+  display: flex;
+}
+
+// dropdown started
+
+
+.dropdown {
+  position: relative;
+  border: 1.5px solid $hoverColor;
+  border-radius: 5px;
+  padding: 8px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dropdown__text{
     display: flex;
+    gap: 10px;
+    padding: 5px;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+ 
+.dropdown__icon{
+    font-size: 14px;
+    display: inline-block;
+    transition: 0.8s;
+}
+
+.dropdown__list {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: $secondaryColor;
+  width: 100%;
+  box-shadow: 0px 0px 4px $hoverColor;
+  border-radius: 2px;
+  top: 120%;
+  left: 0;
+  transition: 1s;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+}
+
+// .dropdown__item{
+//     border-radius: 2px;
+//     padding: 5px;
+// }
+.dropdown__item{
+    padding: 5px;
+}
+
+.dropdown__item:hover{
+    background: $hoverColor;
+    color: $secondaryColor;
+    transition: 0.4s;
+}
+
+// .dropdown:hover .dropdown__list{
+//     visibility: visible;
+//     opacity: 1;
+//     transform: scale(1);
+// }
+
+.show__dropdown__list{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.show__dropdown-icon{
+    transform: rotateX(180deg);
 }
